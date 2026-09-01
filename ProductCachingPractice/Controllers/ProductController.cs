@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProductCachingPractice.Data;
+using ProductCachingPractice.DTOs;
+using ProductCachingPractice.Models;
 using ProductCachingPractice.Services;
 
 namespace ProductCachingPractice.Controllers
@@ -6,9 +9,11 @@ namespace ProductCachingPractice.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
-        public ProductController(IProductService productService)
+        private readonly AppDbContext _context;
+        public ProductController(IProductService productService, AppDbContext context)
         {
             _productService = productService;
+            _context = context;
         }
 
         //[HttpPost]
