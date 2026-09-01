@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductCachingPractice.Data;
-using ProductCachingPractice.DTOs;
-using ProductCachingPractice.Models;
 using ProductCachingPractice.Services;
 
 namespace ProductCachingPractice.Controllers

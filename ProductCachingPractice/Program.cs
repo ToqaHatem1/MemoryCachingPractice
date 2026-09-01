@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductCachingPractice.Data;
 using ProductCachingPractice.Services;
-using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,12 +16,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddMemoryCache();
-
-//builder.Services.AddSingleton<IConnectionMultiplexer>(
-//    ConnectionMultiplexer.Connect(
-//        builder.Configuration.GetConnectionString("Redis")!
-//    )
-//);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
