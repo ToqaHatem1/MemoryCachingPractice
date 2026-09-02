@@ -4,6 +4,8 @@ using ProductCachingPractice.Services;
 
 namespace ProductCachingPractice.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -13,19 +15,6 @@ namespace ProductCachingPractice.Controllers
             _productService = productService;
             _context = context;
         }
-
-        //[HttpPost]
-        //public async Task<IActionResult> CreateProduct([FromBody] CreateProductDto product)
-        //{
-        //    _context.Products.Add(new Product
-        //    {
-        //        Name = product.Name,
-        //        Price = product.Price,
-        //        Stock = product.Stock
-        //    });
-        //    await _context.SaveChangesAsync();
-        //    return Ok(product);
-        //}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)

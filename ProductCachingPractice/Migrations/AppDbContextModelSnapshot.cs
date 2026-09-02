@@ -8,7 +8,7 @@ using ProductCachingPractice.Data;
 
 #nullable disable
 
-namespace ProductCachingPractice.Migrations
+namespace MemoryCachingPractice.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot

@@ -9,11 +9,11 @@ using ProductCachingPractice.Data;
 
 #nullable disable
 
-namespace ProductCachingPractice.Migrations
+namespace MemoryCachingPractice.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260823101401_initial_tbl")]
-    partial class initial_tbl
+    [Migration("20260902072742_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

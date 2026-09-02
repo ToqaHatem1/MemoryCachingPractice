@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProductCachingPractice.Migrations
+namespace MemoryCachingPractice.Migrations
 {
     /// <inheritdoc />
-    public partial class initial_tbl : Migration
+    public partial class initialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
